@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row'
+import Row from 'react-bootstrap/Row';
+import Spinner from 'react-bootstrap/Spinner'
 import Paint from '../Paint/Paint';
 
 const Home = () => {
@@ -19,6 +20,9 @@ const Home = () => {
         <div className="home-page">
             <Container>
                 <Row>
+                    {
+                        paints.length === 0 && <Spinner animation="border" />                  
+                    }
                     {
                     paints.map(paint => <Paint key={paint._id} paint={paint}></Paint>)
                     }

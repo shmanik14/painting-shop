@@ -11,7 +11,7 @@ const Paint = (props) => {
     }
     const {_id, pName, price, image} = props.paint
     return (
-        <Col xs={6} md={4}>
+        <Col xs={12} md={4}>
             <Card>
                 <Card.Img variant="top" src={image} />
                 <Card.Body>
