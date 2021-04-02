@@ -8,7 +8,7 @@ const Checkout = () => {
     const [paint, setPaint] = useState({});
     console.log(id)
     useEffect(() => {
-        fetch(`http://localhost:4000/checkout/${id}`)
+        fetch(`https://sheltered-fjord-53570.herokuapp.com/checkout/${id}`)
         .then(res => res.json())
         .then(data => setPaint(data))
     }, [id])
@@ -28,7 +28,7 @@ const Checkout = () => {
                 </thead>
                 <tbody>
                     <tr>
-                    <td>{paint.name}</td>
+                    <td>{paint.pName}</td>
                     <td>1</td>
                     <td>{paint.price}</td>
                     </tr>

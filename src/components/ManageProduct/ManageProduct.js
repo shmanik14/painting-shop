@@ -24,7 +24,7 @@ const ManageProduct = () => {
         history.push('/addProduct');
     }
     const deleteProduct = (id) => {
-        fetch(`http://localhost:4000/delete/${id}`, {
+        fetch(`https://sheltered-fjord-53570.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -37,7 +37,7 @@ const ManageProduct = () => {
     const [loggedInUser, setLoggedInUser] = useContext(paintContext);
     const [manageProducts, setManageProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/manageProduct?email='+loggedInUser.email, {
+        fetch('https://sheltered-fjord-53570.herokuapp.com/manageProduct?email='+loggedInUser.email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

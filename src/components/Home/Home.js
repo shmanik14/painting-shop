@@ -6,7 +6,7 @@ import Paint from '../Paint/Paint';
 const Home = () => {
     const [paints, setPaints] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/paints', {
+        fetch('https://sheltered-fjord-53570.herokuapp.com/paints', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

@@ -48,7 +48,7 @@ const Admin = () => {
             image: imageURL
         }
         const newBooking = {...loggedInUser, ...eventData};
-        const url = `http://localhost:4000/addPaint`;
+        const url = `https://sheltered-fjord-53570.herokuapp.com/addPaint`;
         fetch(url, {
             method: 'POST',
             headers: {

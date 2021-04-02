@@ -7,7 +7,7 @@ const Orders = () => {
     const [loggedInUser, setLoggedInUser] = useContext(paintContext);
     const [orderedProducts, setOrderedProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/manageProduct?email='+loggedInUser.email, {
+        fetch('https://sheltered-fjord-53570.herokuapp.com/manageProduct?email='+loggedInUser.email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

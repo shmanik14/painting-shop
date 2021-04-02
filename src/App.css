@@ -11,7 +11,15 @@
 .navbar-light .navbar-brand {
   font-weight: 700;
   font-size: 32px;
-  color: #fff;
+  color: #000;
+}
+.card-bottom .btn {
+  background: #000;
+  border: 1px solid #000;
+}
+.card-bottom .btn:hover {
+  background: #fff;
+  color: #000;
 }
 .login {
   border: 1px solid #ebdfdf;
