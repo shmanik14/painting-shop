@@ -1,38 +1,122 @@
-.App {
+.home-page{
+  padding-top: 70px;
+}
+.ml-auto.navbar-nav a {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 15px;
+  color: #555;
+  text-transform: capitalize;
+}
+.navbar-light .navbar-brand {
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+}
+.login {
+  border: 1px solid #ebdfdf;
+  width: 500px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 15px;
+}
+.login-btn{
+  border: 1px solid #ebdfdf;
+  background-color: transparent;
+  padding: 5px 20px;
+  border-radius: 50px;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+button.login-btn span {
+  position: absolute;
+  left: 20px;
+}
+/* Home page css */
+.card {
+  padding-top: 30px;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 20px 60px -30px rgb(0 0 0 / 45%);
+    -moz-box-shadow: 0px 20px 60px -30px rgba(0,0,0,.45);
+  box-shadow: 0px 20px 60px -30px rgb(0 0 0 / 45%);
+  margin-bottom: 35px;
+}
+img.card-img-top {
+  width: 50%;
+  margin: 0 auto;
+}
+.card-title {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.card-bottom {
+  padding: 0 25px 30px 25px;
+  position: relative;
+}
+.card-bottom .card-link {
+  font-size: 20px;
+  color: #000;
+  font-weight: 700;
+}
+.card-bottom .btn {
+  position: absolute;
+  right: 10%;
+}
+/* order page css */
+.orders {
+  padding: 50px;
+}
+.summary{
+  -webkit-box-shadow: 0px 20px 60px -30px rgb(0 0 0 / 45%);
+  -moz-box-shadow: 0px 20px 60px -30px rgba(0,0,0,.45);
+  box-shadow: 0px 20px 60px -30px rgb(0 0 0 / 45%);
+  padding: 30px;
+  margin-bottom: 70px;
+}
+.page-header{
+  background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(./images/Bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  padding: 100px 0;
+  margin-bottom: 100px;
+}
+.page-header h1 {
   text-align: center;
+  font-weight: 700;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar{
+  -webkit-box-shadow: 0px 20px 60px -30px rgb(0 0 0 / 45%);
+  -moz-box-shadow: 0px 20px 60px -30px rgba(0,0,0,.45);
+  box-shadow: 0px 20px 60px -30px rgb(0 0 0 / 45%);
+  padding:30px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar ul li {
+  cursor: pointer;
+  list-style: none;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 43px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebar ul li span {
+  padding-right: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+form {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer{
+  margin-top: 50px;
+}
+.footer p {
+  background-color: #000;
+  padding: 15px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
 }
