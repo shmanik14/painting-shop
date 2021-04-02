@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { paintContext } from '../../App';
 import Container from 'react-bootstrap/Container';
-import Spinner from 'react-bootstrap/Spinner';
 import Table from 'react-bootstrap/Table';
 
 const Orders = () => {
@@ -38,9 +37,6 @@ const Orders = () => {
                         </tr>
                     </thead>
                     <tbody>
-                    {
-                        orderedProducts.length === 0 && <Spinner animation="border" />                  
-                    }
                 {
                     orderedProducts.map(paint => 
                     <tr>

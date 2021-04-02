@@ -2,7 +2,6 @@ import React, { useState, useContext, useEffect } from 'react';
 import { paintContext } from '../../App';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Spinner from 'react-bootstrap/Spinner';
 import Table from 'react-bootstrap/Table';
 import Col from 'react-bootstrap/Col';
 import { useHistory } from 'react-router-dom';
@@ -74,9 +73,6 @@ const ManageProduct = () => {
                     </tr>
                 </thead>
                 <tbody>
-                {
-                    manageProducts.length === 0 && <Spinner animation="border" />                  
-                }
             {
                 manageProducts.map(paint => 
                 <tr>
