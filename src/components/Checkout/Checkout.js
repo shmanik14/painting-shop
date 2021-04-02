@@ -1,17 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { paintContext } from '../../App';
 import { useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
 
 const Checkout = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(paintContext);
     const {id} = useParams();
     const [paint, setPaint] = useState({});
-    console.log(id)
+    const eventData = {
+        pName: paint.pName,
+        price: paint.price,
+        weight: paint.weight,
+        date: paint.date,
+        image: paint.image
+    }
     useEffect(() => {
         fetch(`https://sheltered-fjord-53570.herokuapp.com/checkout/${id}`)
         .then(res => res.json())
         .then(data => setPaint(data))
     }, [id])
+    const newOrder = {...loggedInUser, ...eventData}
+        const url = `https://sheltered-fjord-53570.herokuapp.com/addOrder`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newOrder)
+        })
+        .then(res => {
+            console.log('order');
+        })
     return (
         <div>
             <div className="page-header">

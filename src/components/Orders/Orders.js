@@ -7,7 +7,7 @@ const Orders = () => {
     const [loggedInUser, setLoggedInUser] = useContext(paintContext);
     const [orderedProducts, setOrderedProducts] = useState([]);
     useEffect(() => {
-        fetch('https://sheltered-fjord-53570.herokuapp.com/manageProduct?email='+loggedInUser.email, {
+        fetch('https://sheltered-fjord-53570.herokuapp.com/orders?email='+loggedInUser.email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ const Orders = () => {
                 <div className="summary">
                     <h4>Hello, {loggedInUser.name}</h4>
                     <h6>Your Email Address: {loggedInUser.email}</h6>
-                    <p>Total Order: {orderedProducts.length}</p>
+                    {/* <p>Total Order: {orderedProducts.length}</p> */}
                 </div>
                 <Table striped bordered hover>
                     <thead>

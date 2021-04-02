@@ -133,3 +133,10 @@ form {
   font-size: 18px;
   font-weight: 600;
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .login {
+    width: 100%;
+  }
+  
+}
